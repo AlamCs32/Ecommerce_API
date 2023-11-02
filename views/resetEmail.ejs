@@ -1,0 +1,47 @@
+<% if(typeof data.message!='undefined' ){ %>
+    <% data.message.map(i=>{ %>
+        <span style="color:cornflowerblue ;">
+            <%= i%>
+        </span>
+        <% }) %>
+            <%}%>
+                <div class="container bg-image">
+                    <% if(typeof data.field!='undefined' ){ %>
+                        <% data.field.map(i=>{ %>
+                            <span style="color:cornflowerblue ;">
+                                <%= i%>
+                            </span>
+                            <% }) %>
+                                <%}%>
+                                    <div class="row">
+                                        <% if(typeof password!='undefined' ){ %>
+                                            <% password.map(i=>{ %>
+                                                <span style="color:cornflowerblue ;">
+                                                    <%= i%>
+                                                </span>
+                                                <% }) %>
+                                                    <%}%>
+                                                        <div class="col-sm-8 login-box">
+                                                            <div class="row">
+                                                                <div class="col-sm-6 login-form">
+                                                                    <h3>Email</h3>
+                                                                    <form method="post" action="/resetmail">
+
+                                                                        <div class="form-group">
+                                                                            <label for="exampleInputEmail1">Email
+                                                                                address</label>
+                                                                            <input type="email" class="form-control"
+                                                                                id="exampleInputEmail1"
+                                                                                aria-describedby="emailHelp"
+                                                                                placeholder="Enter email" name="email">
+                                                                        </div>
+
+                                                                        <button type="submit"
+                                                                            class="btn btn-primary">Login</button>
+                                                                    </form>
+
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                    </div>
+                </div>

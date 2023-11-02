@@ -1,0 +1,32 @@
+Order Pages
+<% if(typeof data.message!='undefined' ){ %>
+    <% data.message.map(i=>{ %>
+        <h4 class="display-4 header">
+            <%= i%>
+        </h4>
+        <% }) %>
+            <%}%>
+
+            <% if(typeof order!='undefined' ){ %>
+                <% order.map(i=>{ %>
+                    <h4 class="display-4 header">
+                        <%= i.shipping_status%>
+                    </h4>
+                    <% }) %>
+                        <%}%>
+<% if(typeof orderDetails!='undefined' ){ %>
+<% orderDetails.map(i=>{ %>
+    <li class="display-4 header">
+        <%= i.OrderId%>
+    </li>
+    <% }) %>
+        <%}%>
+    <ol>
+        <% if(typeof order !== "undefined"){ %> 
+            <% order.map( i => { %>
+                 <li><%= i.id  %></li>
+                 <li><%= i.total_product  %></li>
+                <% }) %>  
+        <%}%>
+    </ol>
+

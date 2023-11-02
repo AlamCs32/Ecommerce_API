@@ -1,0 +1,31 @@
+<link rel="stylesheet" href="/css/addProduct.css">
+<div class="container">
+    <h3>
+        Product create
+    </h3>
+    <div class="ProductAddform" enctype="multipart/form-data">
+        <form action="/product/add" method="post">
+            <input type="file" name="product"><br>
+            <input type="file" name="thumbnail"><br>
+            <input type="text" name="title" placeholder="title of product"><br>
+            <input type="text" name="description" placeholder="description"><br>
+            <input type="text" name="color" placeholder="color"><br>
+            <input type="text" name="stock" placeholder="stock"><br>
+            <input type="text" name="gender" placeholder="gender"><br>
+            <input type="text" name="type" placeholder="type"><br>
+            <input type="text" name="size" placeholder="size"><br>
+            <input type="text" name="MRP" placeholder="MRP"><br>
+            <input type="text" name="Discount" placeholder="Discount"><br>
+            <input type="text" name="price" placeholder="price"><br>
+            <input type="text" name="category" placeholder="category"><br>
+            <button class="btn" type="submit">submit</button>
+        </form>
+    </div>
+    <% if(typeof data.field!='undefined' ){ %>
+        <% data.field.map(i=>{ %>
+            <span style="color:cornflowerblue ;">
+                <%= i%>
+            </span>
+            <% }) %>
+                <%}%>
+</div>

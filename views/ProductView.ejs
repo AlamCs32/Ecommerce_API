@@ -1,0 +1,29 @@
+<%- include('./partials/navbar') -%>
+
+    <h1 style="text-align: center;font-size: 80px;">Product View </h1>
+    <% if(typeof product!='undefined' ){ %>
+
+        <div class="card" style="width: 18rem;  display: inline-block;">
+            <img class="card-img-top" src=<%=product.thumbnail%> alt="Card image cap">
+            <div class="card-body">
+                <h5 class="card-title">
+                    <%= product.title%>
+                </h5>
+                <h7 class="card-title">$<%= product.price%>
+                </h7>
+                <p class="card-text">
+                    <%= product.description%>
+                </p>
+            </div>
+        </div>
+        <% if (typeof product.url !="" ){ %>
+
+            <% product.url.map(i=>{ %>
+                <img src=<%=i%> alt="Product Image">
+                <% }) %>
+                    <%}%>
+                        <h3>Specification</h3>
+                        <h3>
+                            name: <%= product.Specification.name %>
+                        </h3>
+                        <%}%>

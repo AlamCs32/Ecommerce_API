@@ -1,0 +1,20 @@
+<%- include('./partials/navbar') -%>
+
+  <% if(typeof product!='undefined' ){ %>
+    <% product.map(i=>{ %>
+      <div class="card" style="width: 18rem;  display: inline-block;">
+        <img class="card-img-top" src="<%=i.thumbnail%>" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">
+            <%= i.title%>
+          </h5>
+          <h7 class="card-title">$<%= i.price%>
+          </h7>
+          <p class="card-text">
+            <%= i.description%>
+          </p>
+          <a href="/product/<%=i.id%>" target="_blank">go for </a>
+        </div>
+      </div>
+      <% }) %>
+        <%}%>

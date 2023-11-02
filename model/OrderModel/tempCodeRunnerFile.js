@@ -1,0 +1,1 @@
+e.log("table is created")).catch(error => console.log(error))

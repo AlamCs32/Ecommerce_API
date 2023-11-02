@@ -1,0 +1,26 @@
+Hello Cart Product
+<% if(typeof product!='undefined' ){ %>
+    <% product.map(i=>{ %>
+      <div class="card" style="width: 18rem;  display: inline-block;">
+        <img class="card-img-top" src="/img/rose.jpg" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">
+            <%= i.title%>
+          </h5>
+          <h7 class="card-title">$<%= i.price%>
+          </h7>
+          <p class="card-text">
+            <%= i.description%>
+          </p>
+        </div>
+      </div>
+      <% }) %>
+        <%}%>
+        
+        <% if(typeof data.message!='undefined' ){ %>
+          <% data.message.map(i=>{ %>
+              <h4 class="display-4 header">
+                  <%= i%>
+              </h4>
+              <% }) %>
+                  <%}%>
